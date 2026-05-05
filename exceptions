@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import sys
+
+# Read number of test cases
+try:
+    line = sys.stdin.readline()
+    if not line:
+        exit()
+    t = int(line)
+except ValueError:
+    exit()
+
+for _ in range(t):
+    try:
+        a, b = sys.stdin.readline().split()
+        # Perform integer division
+        print(int(a) // int(b))
+    except (ZeroDivisionError, ValueError) as e:
+        # Print the error code
+        print("Error Code:", e)
