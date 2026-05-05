@@ -1,0 +1,24 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+
+# Initialize the OrderedDict
+ordered_dictionary = OrderedDict()
+
+# Read the number of items
+n = int(input())
+
+for _ in range(n):
+    # Read line, separating name from the last element (price)
+    line = input().split()
+    price = int(line[-1])
+    item_name = " ".join(line[:-1])
+    
+    # Update total price if key exists, else create it
+    if item_name in ordered_dictionary:
+        ordered_dictionary[item_name] += price
+    else:
+        ordered_dictionary[item_name] = price
+
+# Print item name and net price
+for item, total_price in ordered_dictionary.items():
+    print(f"{item} {total_price}")
