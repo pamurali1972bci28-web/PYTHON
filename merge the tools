@@ -1,0 +1,17 @@
+
+def merge_the_tools(string, k):
+    # Iterate through the string in steps of k
+    for i in range(0, len(string), k):
+        # Slice the substring
+        substring = string[i:i + k]
+        
+        # Use a dictionary to keep only the first occurrence of each character
+        # dict.fromkeys() preserves the order they first appeared
+        unique_chars = dict.fromkeys(substring)
+        
+       
+        print("".join(unique_chars))
+
+
+
+if __name__ == '__main__':
