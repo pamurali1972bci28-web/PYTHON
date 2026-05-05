@@ -1,0 +1,4 @@
+def print_rangoli(size):
+    # your code goes here
+
+if __name__ == '__main__':
